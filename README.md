@@ -8,17 +8,17 @@ Add this line to your application's Gemfile:
 
     gem 'rspec-profiler'
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rspec-profiler
-
 ## Usage
 
-TODO: Write usage instructions here
+In your `spec_helper.rb`:
+
+    require 'rspec/profiler'
+
+    RSpec.configure do |c|
+      # other configuration...
+
+      RSpec::Profiler.profile!(c)
+    end
 
 ## Contributing
 
